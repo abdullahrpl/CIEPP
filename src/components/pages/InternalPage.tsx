@@ -67,7 +67,7 @@ export function InternalPage() {
                     </div>
 
                     {/* Mini Grid */}
-                    <div className="grid grid-cols-4 gap-2.5 mb-4 p-3 bg-slate-100 rounded-[10px]">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-4 p-3 bg-slate-100 rounded-[10px]">
                         {[
                             { label: 'Usia', value: '13–17' },
                             { label: 'Wilayah', value: 'Kota Serang' },

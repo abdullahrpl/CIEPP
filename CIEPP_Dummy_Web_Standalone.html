@@ -15,6 +15,18 @@
 @media(max-width:1050px){.journey.six{grid-template-columns:repeat(3,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.kpi-grid{grid-template-columns:repeat(2,1fr)}.app-shell{grid-template-columns:210px 1fr}.main-content{padding:24px}}
 @media(max-width:760px){.topbar{align-items:flex-start;gap:10px}.brand span{display:none}.app-shell{display:block}.sidebar{position:sticky;top:67px;z-index:15;padding:8px;border-right:0;border-bottom:1px solid var(--line);overflow:auto}.sidebar nav{display:flex;position:static;width:max-content}.nav-item{white-space:nowrap}.sidebar-note{display:none}.hero{grid-template-columns:1fr;padding:22px}.grid-3,.grid-2,.split,.form-grid,.internal-layout{grid-template-columns:1fr}.journey.six{grid-template-columns:repeat(2,1fr)}.kpi-grid{grid-template-columns:1fr 1fr}.mini-grid{grid-template-columns:1fr 1fr}.section-title{align-items:flex-start;flex-direction:column}.main-content{padding:18px 14px 44px}footer{flex-direction:column}.bar-row{grid-template-columns:120px 1fr 38px}}
 
+/* Dark contrast overrides for colors that are otherwise fixed in page styles. */
+.high-contrast .hero{background:linear-gradient(135deg,#17263a,#15352f);border-color:#334155;color:#f1f5f9}
+.high-contrast .hero p,.high-contrast .card p,.high-contrast .section-title p,.high-contrast .clean-list,.high-contrast .definition dd,.high-contrast .small,.high-contrast .case span,.high-contrast .step span,.high-contrast .partner span,.high-contrast .kpi span,.high-contrast .kpi small{color:#cbd5e1}
+.high-contrast .eyebrow,.high-contrast .kicker,.high-contrast .text-btn,.high-contrast .case em{color:#93c5fd}
+.high-contrast .callout{background:#172b43;border-color:#3b82f6;color:#f1f5f9}
+.high-contrast .callout.warning{background:#422f0b;border-color:#facc15;color:#fef3c7}
+.high-contrast .callout.danger{background:#451a24;border-color:#fb7185;color:#ffe4e6}
+.high-contrast .chips span,.high-contrast .data-pills span,.high-contrast .tag{background:#dbeafe;color:#1e293b}
+.high-contrast .mini-grid>div,.high-contrast .check-grid label{background:#1e293b;color:#f1f5f9}
+.high-contrast .form-card select,.high-contrast .form-card textarea{background:#fff;color:#162033}
+@media(max-width:640px){.topbar{flex-wrap:wrap;padding:10px 14px}.brand-mark{flex:none}.top-actions{flex-wrap:wrap}.hero-actions{flex-wrap:wrap}.journey.six{grid-template-columns:1fr}.bar-row{grid-template-columns:minmax(90px,120px) minmax(0,1fr) 32px}.main-content{min-width:0;overflow-x:hidden}}
+
 </style>
 </head>
 <body>

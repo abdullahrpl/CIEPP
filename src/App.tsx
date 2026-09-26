@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Topbar } from './components/layout/Topbar';
-import { Sidebar } from './components/layout/Sidebar';
+import { MobileNav, Sidebar } from './components/layout/Sidebar';
 import { Footer } from './components/layout/Footer';
 import { AppContext } from './context/AppContext';
 
@@ -64,12 +64,14 @@ function App() {
             </a>
             <Topbar />
 
-            <div className="flex flex-1 overflow-hidden">
+            <MobileNav />
+
+            <div className="flex flex-1 min-h-0">
                 <Sidebar />
 
                 <main
                     id="main"
-                    className="flex-1 overflow-auto p-10 md:p-12 lg:p-14 max-w-7xl mx-auto w-full md:ml-[250px]"
+                    className="flex-1 min-w-0 w-full overflow-x-hidden p-4 sm:p-6 lg:p-10 md:ml-[250px] md:flex-none md:w-[calc(100%-250px)]"
                     tabIndex={-1}
                 >
                     {renderPage()}

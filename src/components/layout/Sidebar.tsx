@@ -55,3 +55,26 @@ export function Sidebar() {
         </aside>
     );
 }
+
+export function MobileNav() {
+    const context = useContext(AppContext);
+    if (!context) return null;
+    const { currentPage, setCurrentPage, highContrast } = context;
+
+    return (
+        <nav aria-label="Navigasi utama" className={`md:hidden flex gap-2 overflow-x-auto px-3 py-2 border-b ${highContrast ? 'bg-slate-900 border-slate-700' : 'bg-blue-50 border-line'}`}>
+            {navItems.map((item) => (
+                <button
+                    key={item.id}
+                    onClick={() => setCurrentPage(item.id)}
+                    aria-current={currentPage === item.id ? 'page' : undefined}
+                    className={`shrink-0 rounded-full px-3 py-2 text-sm ${currentPage === item.id
+                        ? highContrast ? 'bg-slate-700 text-blue-200 font-bold' : 'bg-soft text-primary font-bold'
+                        : highContrast ? 'text-slate-200' : 'text-slate-700'}`}
+                >
+                    {item.label}
+                </button>
+            ))}
+        </nav>
+    );
+}

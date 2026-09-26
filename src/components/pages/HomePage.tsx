@@ -10,7 +10,7 @@ export function HomePage() {
     return (
         <div className="space-y-10">
             {/* Hero Section */}
-            <div className="grid md:grid-cols-2 gap-10 items-center bg-gradient-to-br from-blue-50 to-emerald-50 p-10 border border-blue-200 rounded-card">
+            <div className="hero grid md:grid-cols-2 gap-6 lg:gap-10 items-center bg-gradient-to-br from-blue-50 to-emerald-50 p-5 sm:p-8 lg:p-10 border border-blue-200 rounded-card">
                 <div>
                     <span className="eyebrow">PROTOTIPE KONSEPTUAL</span>
                     <h1 className="section-title h1 mt-2">
@@ -19,7 +19,7 @@ export function HomePage() {
                     <p className="text-base text-slate-600 mt-4 max-w-2xl">
                         CIEPP dirancang bukan sebagai aplikasi baru yang berdiri sendiri, melainkan sebagai penghubung pendidikan, perlindungan anak, layanan sosial, kesehatan, keluarga, dan rujukan lintas sektor.
                     </p>
-                    <div className="flex gap-4 mt-8">
+                    <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
                         <button onClick={() => setCurrentPage('lapor')} className="btn-primary">
                             Minta bantuan
                         </button>
@@ -55,7 +55,7 @@ export function HomePage() {
                     <h2 className="text-2xl font-bold mt-3">Masalah dulu, fitur kemudian</h2>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                     {[
                         { num: 1, title: 'Identifikasi', desc: 'Outreach, komunitas, sekolah, pengaduan' },
                         { num: 2, title: 'Asesmen', desc: 'Pendidikan, keluarga, ekonomi, kesehatan, perlindungan' },

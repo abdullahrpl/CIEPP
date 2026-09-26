@@ -42,7 +42,7 @@ export function DataPage() {
                     <h3 className="text-base font-semibold mb-3">Wilayah dengan kasus tercatat tertinggi</h3>
                     <div className="space-y-3">
                         {regions.map((region) => (
-                            <div key={region.name} className="grid grid-cols-[145px_1fr_44px] gap-2.5 items-center">
+                            <div key={region.name} className="grid grid-cols-[minmax(90px,145px)_minmax(0,1fr)_36px] gap-2.5 items-center">
                                 <span className="text-xs">{region.name}</span>
                                 <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
                                     <div

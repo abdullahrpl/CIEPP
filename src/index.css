@@ -122,3 +122,95 @@ body {
 .high-contrast .btn-ghost {
     @apply bg-slate-700 text-blue-300 border-slate-600;
 }
+
+/* Keep fixed Tailwind text colors readable on the dark high-contrast surfaces. */
+.high-contrast .text-slate-600,
+.high-contrast .text-slate-700,
+.high-contrast .text-muted {
+    color: #cbd5e1;
+}
+
+.high-contrast .text-primary,
+.high-contrast .kicker,
+.high-contrast .eyebrow,
+.high-contrast .btn-text {
+    color: #93c5fd;
+}
+
+.high-contrast .hero {
+    @apply border-slate-700 text-slate-100;
+    background: linear-gradient(135deg, #17263a, #15352f);
+}
+
+.high-contrast .hero p,
+.high-contrast .hero h1 {
+    color: #e2e8f0;
+}
+
+.high-contrast .callout {
+    background: #172b43;
+    border-color: #3b82f6;
+    color: #f1f5f9;
+}
+
+.high-contrast .callout-warning {
+    background: #422f0b;
+    border-color: #facc15;
+    color: #fef3c7;
+}
+
+.high-contrast .callout-danger {
+    background: #451a24;
+    border-color: #fb7185;
+    color: #ffe4e6;
+}
+
+.high-contrast .callout p,
+.high-contrast .callout-warning p,
+.high-contrast .callout-danger p {
+    color: inherit;
+}
+
+.high-contrast .bg-slate-100 {
+    background-color: #334155;
+}
+
+.high-contrast .bg-slate-50 {
+    background-color: #1e293b;
+}
+
+.high-contrast .bg-soft {
+    background-color: #243b57;
+}
+
+.high-contrast .chip,
+.high-contrast .tag {
+    background-color: #dbeafe;
+    color: #1e293b;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+    color: #162033;
+    background-color: #fff;
+}
+
+@media (max-width: 640px) {
+    .section-title h1 {
+        font-size: 1.65rem;
+    }
+
+    .hero {
+        padding: 1.25rem;
+        gap: 1.5rem;
+    }
+
+    .hero .flex.gap-4 {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        align-items: flex-start;
+    }
+}

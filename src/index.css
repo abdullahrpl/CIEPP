@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply px-[15px] py-[10px] rounded-[12px] bg-primary font-bold text-white hover:bg-primary-dark transition-colors;
+    }
+
+    .btn-secondary {
+        @apply px-[15px] py-[10px] rounded-[12px] border border-primary bg-white text-primary font-bold hover:bg-soft transition-colors;
+    }
+
+    .btn-ghost {
+        @apply px-[10px] py-[8px] rounded-[10px] border border-line bg-white hover:bg-soft transition-colors;
+    }
+
+    .btn-text {
+        @apply bg-transparent text-primary font-bold border-0 cursor-pointer hover:opacity-80 transition-opacity;
+    }
+
+    .card {
+        @apply bg-surface border border-line rounded-card shadow-card p-5;
+    }
+
+    .card-accent {
+        @apply card border-t-4 border-t-accent;
+    }
+
+    .card-muted {
+        @apply card bg-slate-50;
+    }
+
+    .eyebrow {
+        @apply text-xs font-bold tracking-wider text-primary uppercase inline-block;
+    }
+
+    .kicker {
+        @apply text-xs font-bold text-accent tracking-wider uppercase block;
+    }
+
+    .tag {
+        @apply inline-block text-xs text-slate-700 bg-slate-100 rounded-full px-2.5 py-1.5;
+    }
+
+    .chip {
+        @apply inline-flex items-center rounded-full px-2.5 py-1.5 bg-blue-100 text-slate-700 text-xs;
+    }
+
+    .callout {
+        @apply p-3.5 rounded-[14px] bg-soft border border-blue-200;
+    }
+
+    .callout-warning {
+        @apply callout bg-warn border-yellow-300;
+    }
+
+    .callout-danger {
+        @apply callout bg-danger border-red-200;
+    }
+
+    .section-title h1 {
+        @apply text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight -tracking-wide mb-4 mt-1;
+    }
+
+    .section-title h2 {
+        @apply text-2xl font-bold mt-1.5;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-bg text-text;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    position: static;
+    left: auto;
+    background: #fff;
+    padding: 8px 12px;
+    z-index: 1000;
+}
+
+.high-contrast {
+    --bg: #0f1419;
+    --surface: #1a1f2e;
+    --text: #e8eaed;
+    --muted: #9ca3af;
+    --line: #374151;
+    --primary: #60a5fa;
+    --soft: #1e3a5f;
+    --warn: #78350f;
+    --danger: #7f1d1d;
+    @apply bg-slate-950 text-slate-100;
+}
+
+.high-contrast .topbar,
+.high-contrast .sidebar,
+.high-contrast footer {
+    @apply bg-slate-900;
+}
+
+.high-contrast .hero {
+    @apply bg-slate-900;
+}
+
+.high-contrast .card {
+    @apply bg-slate-800 border-slate-700;
+}
+
+.high-contrast .btn-secondary,
+.high-contrast .btn-ghost {
+    @apply bg-slate-700 text-blue-300 border-slate-600;
+}

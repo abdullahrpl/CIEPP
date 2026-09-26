@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dummy prototype CIEPP — platform pendidikan inklusif dan perlindungan anak." />
+  <title>CIEPP Banten — Dummy Prototype</title>
+  <style>
+:root{
+  --bg:#f5f7fb;--surface:#ffffff;--text:#162033;--muted:#667085;--line:#e4e8f0;
+  --primary:#1f5c99;--primary2:#133f70;--accent:#2b8a6e;--soft:#eaf3fb;--warn:#fff5d8;--danger:#ffeded;
+  --shadow:0 12px 30px rgba(20,44,80,.08);--radius:18px;--font-scale:1;
+}
+*{box-sizing:border-box}html{font-size:calc(16px * var(--font-scale));scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:1000}.topbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:12px 22px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.brand{display:flex;gap:11px;align-items:center}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:800;font-size:1.2rem}.brand strong{display:block}.brand span{display:block;color:var(--muted);font-size:.78rem}.top-actions{display:flex;gap:8px;align-items:center}.primary,.secondary,.ghost,.nav-item,.role,.text-btn{font:inherit;cursor:pointer}.primary{border:0;border-radius:12px;background:var(--primary);color:#fff;padding:10px 15px;font-weight:700}.primary:hover{background:var(--primary2)}.secondary{border:1px solid var(--primary);border-radius:12px;background:#fff;color:var(--primary);padding:10px 15px;font-weight:700}.ghost{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px}.app-shell{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:calc(100vh - 68px)}.sidebar{padding:18px 12px;border-right:1px solid var(--line);background:#fbfcfe}.sidebar nav{display:grid;gap:5px;position:sticky;top:86px}.nav-item{border:0;background:transparent;text-align:left;padding:10px 12px;border-radius:10px;color:#344054}.nav-item:hover,.nav-item.active{background:var(--soft);color:var(--primary);font-weight:700}.sidebar-note{margin-top:22px;padding:12px;border-radius:12px;background:#eef7f3;color:#245d4d;font-size:.85rem}.sidebar-note span{display:block;margin-top:3px}.main-content{padding:30px 34px 54px;max-width:1500px;width:100%;margin:0 auto}.page{display:none}.page.active{display:block}.hero{display:grid;grid-template-columns:1.45fr .8fr;gap:28px;align-items:center;background:linear-gradient(135deg,#eef6fd,#f3fbf8);padding:34px;border:1px solid #dce9f5;border-radius:24px}.eyebrow{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;color:var(--primary);text-transform:uppercase}.hero h1,.section-title h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.07;margin:.4rem 0 1rem;letter-spacing:-.03em}.hero p{font-size:1.05rem;color:#475467;max-width:800px}.hero-actions{display:flex;gap:10px;margin-top:20px}.hero-card,.card,.form-card,.partner,.case-detail,.case-list{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero-card{padding:24px}.chips,.data-pills{display:flex;flex-wrap:wrap;gap:8px}.chips span,.data-pills span,.tag,.source-pill{display:inline-flex;align-items:center;border-radius:999px;padding:6px 10px;background:#f0f4f8;color:#344054;font-size:.78rem}.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:22px}.section-title h2{margin:.35rem 0 0}.section-title p{color:var(--muted);max-width:900px;margin:.4rem 0 0}.section-gap{margin-top:24px}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{padding:20px}.card.accent{border-top:4px solid var(--accent)}.card.muted{background:#f8fafc}.kicker{font-size:.72rem;font-weight:800;color:var(--accent);letter-spacing:.08em}.card h3{margin:.45rem 0 .6rem}.card p{color:#475467}.text-btn{border:0;background:transparent;color:var(--primary);padding:0;font-weight:700}.journey{display:grid;gap:10px}.journey.six{grid-template-columns:repeat(6,minmax(0,1fr))}.step{position:relative;padding:15px;background:#fff;border:1px solid var(--line);border-radius:15px;min-height:150px}.step b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--soft);color:var(--primary);margin-bottom:12px}.step strong{display:block}.step span{display:block;color:var(--muted);font-size:.82rem;margin-top:6px}.timeline{display:grid;gap:4px}.timeline-item{display:grid;grid-template-columns:42px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}.dot{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800}.timeline h3{margin:0}.timeline p{margin:.25rem 0;color:var(--muted)}.mini-card{padding:15px;border:1px solid var(--line);border-radius:14px;background:#fff}.mini-card strong,.mini-card span{display:block}.mini-card span{color:var(--muted);font-size:.85rem;margin-top:3px}.callout{padding:14px 16px;border-radius:14px;background:#eaf3fb;border:1px solid #cfe2f4}.callout.warning{background:var(--warn);border-color:#f1dda0}.callout.danger{background:var(--danger);border-color:#ffcaca}.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.clean-list{padding-left:20px}.clean-list li{margin:.45rem 0}.small{font-size:.82rem;color:var(--muted)}.definition{display:grid;grid-template-columns:120px 1fr;gap:8px 14px}.definition dt{font-weight:800}.definition dd{margin:0;color:var(--muted)}.form-card{padding:22px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.form-card label{display:grid;gap:6px;font-weight:700;font-size:.9rem}.form-card select,.form-card textarea{width:100%;border:1px solid #cfd6e3;border-radius:10px;padding:10px 11px;background:#fff;color:var(--text);font:inherit}.form-actions{display:flex;align-items:center;gap:12px;margin-top:12px}.source-pill{background:#eef7f3;color:#245d4d}.kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.kpi{padding:18px;background:#fff;border:1px solid var(--line);border-radius:16px}.kpi span,.kpi small{display:block;color:var(--muted)}.kpi strong{display:block;font-size:2rem;line-height:1.2;margin:.25rem 0}.bar-row{display:grid;grid-template-columns:145px 1fr 44px;gap:10px;align-items:center;margin:12px 0;font-size:.84rem}.bar{height:9px;background:#e9edf4;border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--primary),#4b84ba);border-radius:999px}.stat-line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}.big-stat{font-size:3rem;font-weight:800;color:var(--primary)}.big-stat small{font-size:.9rem;color:var(--muted)}.role-switcher{display:flex;gap:8px;flex-wrap:wrap}.role{border:1px solid var(--line);background:#fff;padding:8px 12px;border-radius:999px}.role.active{background:var(--primary);border-color:var(--primary);color:#fff}.internal-layout{display:grid;grid-template-columns:280px 1fr;gap:16px}.case-list{padding:10px;height:max-content}.case{padding:13px;border-radius:12px;cursor:pointer}.case.active,.case:hover{background:var(--soft)}.case b,.case span,.case em{display:block}.case span{font-size:.82rem;color:var(--muted)}.case em{font-size:.75rem;color:var(--primary);font-style:normal;margin-top:4px}.case-detail{padding:20px}.case-head{display:flex;justify-content:space-between;align-items:flex-start}.status{display:inline-flex;border-radius:999px;padding:5px 9px;font-size:.75rem;font-weight:800}.status.amber{background:#fff2cc;color:#7a5a00}.status.green{background:#e6f6ef;color:#1d674f}.mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}.mini-grid>div{padding:11px;background:#f8fafc;border-radius:10px}.mini-grid small,.mini-grid strong{display:block}.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.check-grid label{padding:9px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}.compact-table{width:100%;border-collapse:collapse;margin-top:8px}.compact-table th,.compact-table td{padding:10px;border-bottom:1px solid var(--line);text-align:left;font-size:.85rem}.partner{padding:18px}.partner strong,.partner span,.partner em{display:block}.partner span{color:var(--muted);margin:.35rem 0}.partner em{font-size:.75rem;color:var(--primary);font-style:normal}footer{display:flex;justify-content:space-between;gap:12px;padding:14px 22px;border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:.78rem}.high-contrast{--bg:#000;--surface:#111;--text:#fff;--muted:#ddd;--line:#555;--primary:#7cc4ff;--primary2:#9ad1ff;--soft:#172638;--warn:#392f00;--danger:#3d1515}.high-contrast .topbar,.high-contrast .sidebar,.high-contrast footer{background:#080808}.high-contrast .hero{background:#101820}.high-contrast .secondary,.high-contrast .ghost,.high-contrast .form-card select,.high-contrast .form-card textarea,.high-contrast .role{background:#111;color:#fff}.high-contrast .mini-grid>div,.high-contrast .check-grid label{background:#181818}
+@media(max-width:1050px){.journey.six{grid-template-columns:repeat(3,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.kpi-grid{grid-template-columns:repeat(2,1fr)}.app-shell{grid-template-columns:210px 1fr}.main-content{padding:24px}}
+@media(max-width:760px){.topbar{align-items:flex-start;gap:10px}.brand span{display:none}.app-shell{display:block}.sidebar{position:sticky;top:67px;z-index:15;padding:8px;border-right:0;border-bottom:1px solid var(--line);overflow:auto}.sidebar nav{display:flex;position:static;width:max-content}.nav-item{white-space:nowrap}.sidebar-note{display:none}.hero{grid-template-columns:1fr;padding:22px}.grid-3,.grid-2,.split,.form-grid,.internal-layout{grid-template-columns:1fr}.journey.six{grid-template-columns:repeat(2,1fr)}.kpi-grid{grid-template-columns:1fr 1fr}.mini-grid{grid-template-columns:1fr 1fr}.section-title{align-items:flex-start;flex-direction:column}.main-content{padding:18px 14px 44px}footer{flex-direction:column}.bar-row{grid-template-columns:120px 1fr 38px}}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">C</div>
+      <div>
+        <strong>CIEPP Banten</strong>
+        <span>Dummy Platform • Pendidikan Inklusif & Perlindungan Anak</span>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="ghost" id="fontBtn" aria-label="Perbesar teks">A+</button>
+      <button class="ghost" id="contrastBtn" aria-label="Ubah kontras">Kontras</button>
+      <button class="primary" data-go="lapor">Butuh Bantuan</button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <nav>
+        <button class="nav-item active" data-page="beranda">Beranda</button>
+        <button class="nav-item" data-page="edukasi">Edukasi & Pencegahan</button>
+        <button class="nav-item" data-page="layanan">Layanan & Rujukan</button>
+        <button class="nav-item" data-page="anjal">Anak Jalanan & Pekerja Anak</button>
+        <button class="nav-item" data-page="inklusi">Pendidikan Inklusif / ABK</button>
+        <button class="nav-item" data-page="komunitas">PATBM & Jejaring Desa</button>
+        <button class="nav-item" data-page="lapor">Pengaduan / Permintaan Bantuan</button>
+        <button class="nav-item" data-page="data">Dashboard Data</button>
+        <button class="nav-item" data-page="internal">Ruang Petugas</button>
+        <button class="nav-item" data-page="mitra">Mitra & MoU</button>
+        <button class="nav-item" data-page="tentang">Tentang & Tata Kelola</button>
+      </nav>
+      <div class="sidebar-note">
+        <strong>Prinsip</strong>
+        <span>Satu anak • satu rencana • satu jejak layanan</span>
+      </div>
+    </aside>
+
+    <main id="main" class="main-content" tabindex="-1">
+      <section class="page active" id="page-beranda">
+        <div class="hero">
+          <div>
+            <span class="eyebrow">PROTOTIPE KONSEPTUAL</span>
+            <h1>Pendidikan inklusif untuk anak rentan, terhubung dengan layanan yang nyata.</h1>
+            <p>CIEPP dirancang bukan sebagai aplikasi baru yang berdiri sendiri, melainkan sebagai penghubung pendidikan, perlindungan anak, layanan sosial, kesehatan, keluarga, dan rujukan lintas sektor.</p>
+            <div class="hero-actions">
+              <button class="primary" data-go="lapor">Minta bantuan</button>
+              <button class="secondary" data-go="layanan">Lihat alur layanan</button>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h3>Siapa yang dibantu?</h3>
+            <div class="chips">
+              <span>Anak jalanan</span><span>Anak tidak sekolah</span><span>Anak berisiko putus sekolah</span><span>Anak dengan disabilitas/ABK</span><span>Anak yang bekerja / rentan pekerja anak</span><span>Anak korban kekerasan / AMPK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title"><div><span class="eyebrow">ALUR UTAMA</span><h2>Masalah dulu, fitur kemudian</h2></div></div>
+        <div class="journey six">
+          <div class="step"><b>1</b><strong>Identifikasi</strong><span>Outreach, komunitas, sekolah, pengaduan</span></div>
+          <div class="step"><b>2</b><strong>Asesmen</strong><span>Pendidikan, keluarga, ekonomi, kesehatan, perlindungan</span></div>
+          <div class="step"><b>3</b><strong>Rencana</strong><span>Tujuan, PIC, tenggat, akomodasi</span></div>
+          <div class="step"><b>4</b><strong>Rujukan</strong><span>Diterima, dijadwalkan, dilayani, selesai</span></div>
+          <div class="step"><b>5</b><strong>Keberlanjutan</strong><span>Bertahan belajar, tidak kembali ke risiko</span></div>
+          <div class="step"><b>6</b><strong>Pembelajaran Sistem</strong><span>Outcome, gap layanan, koreksi kebijakan</span></div>
+        </div>
+
+        <div class="grid-3 section-gap">
+          <article class="card accent">
+            <span class="kicker">PENCEGAHAN</span>
+            <h3>Sebelum menjadi kasus</h3>
+            <p>Edukasi hak anak, pola asuh, pencegahan bullying, perkawinan anak, kekerasan seksual dalam keluarga, keselamatan digital, dan penguatan komunitas.</p>
+            <button class="text-btn" data-go="edukasi">Buka pusat edukasi →</button>
+          </article>
+          <article class="card">
+            <span class="kicker">RESPONS LANGSUNG</span>
+            <h3>Ketika pengaduan masuk</h3>
+            <p>Pengaduan → asesmen keselamatan → tindak lanjut → pendampingan → rujukan → pemulihan → follow-up.</p>
+            <button class="text-btn" data-go="layanan">Lihat service journey →</button>
+          </article>
+          <article class="card">
+            <span class="kicker">INKLUSI</span>
+            <h3>Tidak semua anak bisa masuk lewat ponsel</h3>
+            <p>Mode pendamping, akses luring/hemat kuota, titik akses di kelurahan, PUSPAGA, UPTD PPA, PKBM/SKB/SLB, sekolah, dan komunitas.</p>
+            <button class="text-btn" data-go="inklusi">Lihat standar akses →</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="page-edukasi">
+        <div class="section-title"><div><span class="eyebrow">PENCEGAHAN</span><h1>Edukasi & Pencegahan</h1><p>Konten untuk keluarga, anak, komunitas, sekolah, relawan, tokoh masyarakat dan tokoh agama.</p></div></div>
+        <div class="grid-3">
+          <article class="card"><span class="tag">Hak Anak</span><h3>Kenali hak anak sehari-hari</h3><p>Pendidikan, kesehatan, pengasuhan, bermain, perlindungan, partisipasi, identitas, dan layanan ketika anak berada dalam risiko.</p><button class="text-btn">Baca modul →</button></article>
+          <article class="card"><span class="tag">Keluarga</span><h3>Pola asuh positif & relasi sehat</h3><p>Komunikasi, kedekatan emosional, pengawasan, disiplin tanpa kekerasan, dan tanda anak membutuhkan bantuan.</p><button class="text-btn">Baca modul →</button></article>
+          <article class="card"><span class="tag">Pencegahan kekerasan</span><h3>Kekerasan seksual dalam keluarga</h3><p>Edukasi batas tubuh, rasa aman, cara meminta bantuan, perlindungan korban, dan rujukan profesional. Konten sensitif disajikan ramah anak.</p><button class="text-btn">Baca modul →</button></article>
+          <article class="card"><span class="tag">Perkawinan Anak</span><h3>Pencegahan perkawinan dini</h3><p>Materi untuk keluarga, sekolah, tokoh agama, Kemenag, kelurahan/desa, dan jejaring perlindungan anak.</p><button class="text-btn">Baca modul →</button></article>
+          <article class="card"><span class="tag">Bullying</span><h3>3 lapis pencegahan bullying</h3><p>Kenali tanda, hentikan normalisasi, lindungi pelapor/korban, dan pastikan tindak lanjut sekolah serta layanan.</p><button class="text-btn">Baca modul →</button></article>
+          <article class="card"><span class="tag">Ruang Digital</span><h3>Aman dari eksploitasi & manipulasi daring</h3><p>Grooming, VCS berisiko, ancaman/pemaksaan untuk menyakiti diri, konten seksual eksploitatif, privasi, dan cara melapor.</p><button class="text-btn">Baca modul →</button></article>
+          <article class="card"><span class="tag">NAPZA</span><h3>Ketahanan keluarga & pencegahan NAPZA</h3><p>Edukasi risiko, penguatan keluarga, jalur konsultasi, serta rujukan ke mitra yang memiliki mandat.</p><button class="text-btn">Baca modul →</button></article>
+          <article class="card"><span class="tag">Kampung/Desa</span><h3>Kampung literasi & ruang belajar</h3><p>Taman baca, aktivitas literasi, hak bermain, penguatan ekonomi perempuan, pola asuh, dan praktik budaya lokal positif.</p><button class="text-btn">Lihat contoh aktivitas →</button></article>
+          <article class="card muted"><span class="tag">Admin</span><h3>Konten yang perlu divalidasi</h3><p>Istilah “3M”, daftar resmi 15 kategori AMPK, serta detail regulasi lokal dimasukkan setelah diverifikasi oleh admin kebijakan.</p></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-layanan">
+        <div class="section-title"><div><span class="eyebrow">SERVICE JOURNEY</span><h1>Layanan & Rujukan</h1><p>Tujuannya bukan “sudah dirujuk”, tetapi <strong>anak benar-benar menerima layanan</strong>.</p></div></div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="dot">1</div><div><h3>Pengaduan / penemuan</h3><p>UPTD PPA, SAPA/SIMFONI, sekolah, PATBM, komunitas, kelurahan/desa, petugas lapangan.</p></div></div>
+          <div class="timeline-item"><div class="dot">2</div><div><h3>Triage keselamatan</h3><p>Apakah ada risiko segera? Jika ya, respons darurat tidak menunggu alur administrasi biasa.</p></div></div>
+          <div class="timeline-item"><div class="dot">3</div><div><h3>Asesmen holistik</h3><p>Keselamatan, pendidikan, kesehatan, disabilitas, pengasuhan, psikososial, ekonomi keluarga, dokumen, dan potensi eksploitasi.</p></div></div>
+          <div class="timeline-item"><div class="dot">4</div><div><h3>Rencana layanan individual</h3><p>Satu rencana, satu PIC utama, banyak layanan pendukung bila diperlukan.</p></div></div>
+          <div class="timeline-item"><div class="dot">5</div><div><h3>Rujukan aktif</h3><p>Status: dibuat → diterima → dijadwalkan → layanan dimulai → selesai / perlu eskalasi.</p></div></div>
+          <div class="timeline-item"><div class="dot">6</div><div><h3>Follow-up & closure</h3><p>Kasus tidak ditutup hanya karena anak “sudah dirujuk”. Pastikan hak, layanan, dan pendidikan berlanjut.</p></div></div>
+        </div>
+        <div class="grid-3 section-gap">
+          <div class="mini-card"><strong>UPTD PPA</strong><span>Pengaduan, asesmen kasus, tindak lanjut, pendampingan</span></div>
+          <div class="mini-card"><strong>Dinas Sosial</strong><span>Anak jalanan/PMKS, dukungan sosial, penjangkauan dan rujukan</span></div>
+          <div class="mini-card"><strong>Pendidikan</strong><span>Sekolah inklusif, SLB, PKBM/SKB, reintegrasi & keberlanjutan belajar</span></div>
+          <div class="mini-card"><strong>Kesehatan/RSUD</strong><span>Layanan medis, visum sesuai kebutuhan, kesehatan jiwa</span></div>
+          <div class="mini-card"><strong>Polisi / Bapas / Kejati / Kemenkumham</strong><span>Proses hukum sesuai kewenangan, anak pelaku/korban, diversi/restorative justice</span></div>
+          <div class="mini-card"><strong>PUSPAGA / keluarga</strong><span>Konseling, konsultasi, pengasuhan, dukungan keluarga dan rujukan</span></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-anjal">
+        <div class="section-title"><div><span class="eyebrow">JALUR KHUSUS</span><h1>Anak Jalanan & Risiko Pekerja Anak</h1><p>Hindari anak “terlempar” antarinstansi hanya karena kategori datanya berbeda.</p></div></div>
+        <div class="callout warning"><strong>Diagnosis sistem:</strong> anak jalanan dapat tercatat sebagai PMKS pada Dinas Sosial, sementara indikator “anak bekerja” pada sistem lain dapat menunjukkan angka berbeda. Platform harus menghubungkan kategori dan <em>trajectory</em> anak, bukan memaksakan satu label.</div>
+        <div class="split section-gap">
+          <div class="card">
+            <h3>Ketika anak ditemukan di ruang publik</h3>
+            <ol class="clean-list">
+              <li>Verifikasi keselamatan dan kebutuhan segera.</li>
+              <li>Rujuk penanganan anak jalanan ke Dinas Sosial sesuai mandat.</li>
+              <li>Ases hak anak: masih bersekolah? akses kesehatan? pengasuhan? identitas? eksploitasi?</li>
+              <li>Jika ada indikasi bekerja/eksploitasi, lakukan human review dan koordinasi lintas sektor.</li>
+              <li>Hubungkan kembali ke pendidikan formal/nonformal yang realistis.</li>
+              <li>Pastikan dukungan keluarga agar anak tidak kembali ke situasi yang sama.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>Yang harus dicatat — data minimum</h3>
+            <div class="data-pills"><span>ID kasus pseudonim</span><span>Rentang usia</span><span>Status pendidikan</span><span>Kebutuhan dukungan</span><span>Risiko keselamatan</span><span>Status rujukan</span><span>PIC</span><span>Follow-up</span></div>
+            <p class="small">Tidak menyimpan lokasi presisi, detail eksploitasi, atau identitas sensitif secara default pada tampilan umum.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-inklusi">
+        <div class="section-title"><div><span class="eyebrow">ACCESSIBILITY BY DEFAULT</span><h1>Pendidikan Inklusif / Anak Berkebutuhan Khusus</h1><p>Solusi digital tidak boleh menciptakan eksklusi baru.</p></div></div>
+        <div class="grid-3">
+          <article class="card"><h3>Akses visual</h3><p>Screen reader, struktur heading, teks besar, kontras tinggi, tidak bergantung pada warna.</p></article>
+          <article class="card"><h3>Akses pendengaran</h3><p>Caption, transkrip, media visual yang jelas, dan opsi bahasa isyarat bila tersedia.</p></article>
+          <article class="card"><h3>Akses kognitif</h3><p>Bahasa sederhana, simbol/gambar, langkah singkat, bantuan pendamping.</p></article>
+          <article class="card"><h3>Akses motorik</h3><p>Target klik besar, navigasi keyboard, waktu pengisian fleksibel.</p></article>
+          <article class="card"><h3>Akses konektivitas</h3><p>Mode hemat kuota, formulir singkat, sinkronisasi tertunda, bantuan petugas.</p></article>
+          <article class="card"><h3>Reasonable accommodation</h3><p>Catat kebutuhan akomodasi dan siapa yang bertanggung jawab memenuhinya di sekolah/layanan.</p></article>
+        </div>
+        <div class="callout section-gap"><strong>Prinsip desain:</strong> digital bila berguna, berbantuan bila perlu, luring bila tidak terhindarkan.</div>
+      </section>
+
+      <section class="page" id="page-komunitas">
+        <div class="section-title"><div><span class="eyebrow">PENCEGAHAN BERBASIS KOMUNITAS</span><h1>PATBM & Jejaring Kelurahan/Desa</h1><p>Kolaborasi warga untuk mendeteksi risiko, memberi edukasi, dan menghubungkan keluarga ke layanan formal.</p></div></div>
+        <div class="grid-2">
+          <article class="card"><h3>Struktur contoh PATBM</h3><dl class="definition"><dt>Pembina</dt><dd>Kepala desa/lurah sesuai konteks lokal</dd><dt>Anggota</dt><dd>Kader, sukarelawan, PKK, Posyandu, tokoh masyarakat, tokoh agama</dd><dt>Tugas</dt><dd>Sosialisasi hak anak, pencegahan bullying, deteksi risiko, dan rujukan</dd></dl></article>
+          <article class="card"><h3>Ruang Bersama Indonesia / komunitas</h3><p>Kolaborasi lintas peran di kelurahan/desa: literasi, penguatan ekonomi perempuan, pola asuh, hak bermain anak, taman baca, dan praktik budaya lokal positif.</p><div class="chips"><span>Kampung Literasi</span><span>Taman Baca</span><span>Pemberdayaan Perempuan</span><span>Pola Asuh</span><span>Hak Bermain</span></div></article>
+        </div>
+        <div class="callout warning section-gap"><strong>Catatan validasi:</strong> istilah “3M” pada catatan lapangan belum memiliki kepanjangan yang dapat diverifikasi dari bahan terlampir. Jangan dipublikasikan sebelum dikonfirmasi.</div>
+      </section>
+
+      <section class="page" id="page-lapor">
+        <div class="section-title"><div><span class="eyebrow">DEMO FORM</span><h1>Pengaduan / Permintaan Bantuan</h1><p>Dummy ini tidak mengirim data ke mana pun. Jangan masukkan identitas atau kasus nyata.</p></div></div>
+        <form id="demoForm" class="form-card">
+          <div class="callout danger"><strong>Darurat?</strong> Dalam sistem produksi, risiko keselamatan segera harus memicu kanal respons darurat dan tidak menunggu antrean biasa.</div>
+          <div class="form-grid">
+            <label>Anda sebagai<select><option>Anak/remaja</option><option>Orang tua/pengasuh</option><option>Guru/pendamping</option><option>Relawan/PATBM</option><option>Petugas layanan</option><option>Lainnya</option></select></label>
+            <label>Rentang usia anak<select><option>Tidak tahu</option><option>&lt; 6 tahun</option><option>6–12 tahun</option><option>13–17 tahun</option></select></label>
+            <label>Kabupaten/kota<select><option>Pilih wilayah</option><option>Pandeglang</option><option>Lebak</option><option>Kabupaten Tangerang</option><option>Kabupaten Serang</option><option>Kota Tangerang</option><option>Kota Cilegon</option><option>Kota Serang</option><option>Kota Tangerang Selatan</option></select></label>
+            <label>Jenis kebutuhan<select><option>Pendidikan</option><option>Anak jalanan / penjangkauan</option><option>Disabilitas / akomodasi</option><option>Kekerasan / perlindungan</option><option>Risiko pekerja anak / eksploitasi</option><option>Kesehatan / psikososial</option><option>Dukungan keluarga</option><option>Lainnya</option></select></label>
+            <label>Risiko keselamatan segera?<select><option>Tidak tahu</option><option>Ya</option><option>Tidak</option></select></label>
+            <label>Boleh dihubungi kembali?<select><option>Ya</option><option>Tidak / ingin anonim</option></select></label>
+          </div>
+          <label>Ringkasan kebutuhan<textarea rows="5" placeholder="Demo saja — jangan isi identitas asli, alamat lengkap, atau detail sensitif."></textarea></label>
+          <div class="form-actions"><button type="submit" class="primary">Simulasikan kirim</button><span id="formMessage" role="status"></span></div>
+        </form>
+      </section>
+
+      <section class="page" id="page-data">
+        <div class="section-title"><div><span class="eyebrow">DASHBOARD DEMO</span><h1>Snapshot Data Perlindungan Anak</h1><p>Data agregat untuk pengambilan keputusan. Bukan daftar kasus individual.</p></div><span class="source-pill">SIMFONI PPA • file 19 Jan 2026 • tahun data 2025</span></div>
+        <div class="kpi-grid">
+          <div class="kpi"><span>Kasus perempuan & anak</span><strong>1.442</strong><small>Banten, agregat 2025</small></div>
+          <div class="kpi"><span>Total korban</span><strong>1.544</strong><small>Perempuan + laki-laki</small></div>
+          <div class="kpi"><span>Korban anak</span><strong>997</strong><small>≈64,6% dari seluruh korban</small></div>
+          <div class="kpi"><span>Kasus anak</span><strong>914</strong><small>Dataset anak 2025</small></div>
+        </div>
+        <div class="grid-2 section-gap">
+          <article class="card">
+            <h3>Wilayah dengan kasus tercatat tertinggi</h3>
+            <div class="bar-row"><span>Kota Tangerang Selatan</span><div class="bar"><i style="width:100%"></i></div><b>334</b></div>
+            <div class="bar-row"><span>Kab. Tangerang</span><div class="bar"><i style="width:96%"></i></div><b>321</b></div>
+            <div class="bar-row"><span>Kota Tangerang</span><div class="bar"><i style="width:83%"></i></div><b>276</b></div>
+            <p class="small">Perbedaan antarwilayah dapat dipengaruhi populasi, akses pelaporan, kapasitas pencatatan dan layanan.</p>
+          </article>
+          <article class="card">
+            <h3>Profil korban anak 2025</h3>
+            <div class="stat-line"><span>Perempuan</span><strong>734</strong></div>
+            <div class="stat-line"><span>Laki-laki</span><strong>263</strong></div>
+            <div class="stat-line"><span>Kekerasan seksual*</span><strong>656</strong></div>
+            <div class="stat-line"><span>Kekerasan psikis*</span><strong>226</strong></div>
+            <div class="stat-line"><span>Kekerasan fisik*</span><strong>157</strong></div>
+            <p class="small">*Bentuk kekerasan dapat tumpang tindih pada korban yang sama.</p>
+          </article>
+          <article class="card">
+            <h3>Layanan yang tercatat untuk korban anak</h3>
+            <div class="bar-row"><span>Pengaduan</span><div class="bar"><i style="width:100%"></i></div><b>997</b></div>
+            <div class="bar-row"><span>Kesehatan</span><div class="bar"><i style="width:37%"></i></div><b>364</b></div>
+            <div class="bar-row"><span>Bantuan hukum</span><div class="bar"><i style="width:36%"></i></div><b>358</b></div>
+            <div class="bar-row"><span>Penegakan hukum</span><div class="bar"><i style="width:2%"></i></div><b>19</b></div>
+          </article>
+          <article class="card">
+            <h3>Lokasi kejadian — semua korban</h3>
+            <div class="big-stat">979 <small>kasus rumah tangga</small></div>
+            <p>Rumah tangga menjadi lokasi yang paling banyak tercatat pada narasi data terlampir, sehingga pencegahan keluarga menjadi bagian inti platform.</p>
+          </article>
+        </div>
+        <div class="callout warning section-gap"><strong>Catatan data:</strong> angka administratif adalah laporan yang tercatat, bukan otomatis prevalensi. Platform produksi harus menyimpan definisi indikator, tahun, sumber, timestamp, dan aturan deduplikasi.</div>
+      </section>
+
+      <section class="page" id="page-internal">
+        <div class="section-title"><div><span class="eyebrow">INTERNAL • ROLE-BASED</span><h1>Ruang Petugas — Case Management</h1><p>Contoh tampilan untuk UPTD PPA, Dinsos, pendidikan, kesehatan, dan mitra rujukan. Semua data di bawah fiktif.</p></div></div>
+        <div class="role-switcher" role="group" aria-label="Pilih peran demo">
+          <button class="role active" data-role="UPTD PPA">UPTD PPA</button><button class="role" data-role="Dinsos">Dinsos</button><button class="role" data-role="Pendidikan">Pendidikan</button><button class="role" data-role="Data Steward">Data Steward</button>
+        </div>
+        <div class="internal-layout section-gap">
+          <div class="case-list">
+            <div class="case active"><b>CIEPP-26-001</b><span>Risiko pendidikan + penjangkauan</span><em>Perlu asesmen</em></div>
+            <div class="case"><b>CIEPP-26-002</b><span>Akomodasi pendidikan</span><em>Rujukan diterima</em></div>
+            <div class="case"><b>CIEPP-26-003</b><span>Dukungan keluarga</span><em>Follow-up 30 hari</em></div>
+          </div>
+          <div class="case-detail">
+            <div class="case-head"><div><span class="eyebrow">KASUS FIKTIF</span><h2>CIEPP-26-001</h2></div><span class="status amber">Perlu asesmen</span></div>
+            <div class="mini-grid">
+              <div><small>Usia</small><strong>13–17</strong></div><div><small>Wilayah</small><strong>Kota Serang</strong></div><div><small>Sumber</small><strong>Komunitas</strong></div><div><small>PIC</small><strong>Belum ditetapkan</strong></div>
+            </div>
+            <h3>Checklist asesmen minimum</h3>
+            <div class="check-grid"><label><input type="checkbox"> Keselamatan</label><label><input type="checkbox"> Status pendidikan</label><label><input type="checkbox"> Kesehatan</label><label><input type="checkbox"> Kebutuhan disabilitas</label><label><input type="checkbox"> Pengasuhan</label><label><input type="checkbox"> Ekonomi keluarga</label><label><input type="checkbox"> Dokumen identitas</label><label><input type="checkbox"> Risiko kerja/eksploitasi</label></div>
+            <h3>Jejak rujukan</h3>
+            <table class="compact-table"><thead><tr><th>Layanan</th><th>Status</th><th>PIC</th><th>Tenggat</th></tr></thead><tbody><tr><td>Dinas Sosial</td><td><span class="status green">Diterima</span></td><td>Petugas A</td><td>2 hari</td></tr><tr><td>Pendidikan / PKBM</td><td><span class="status amber">Menunggu asesmen</span></td><td>—</td><td>5 hari</td></tr></tbody></table>
+            <div class="callout section-gap"><strong>Guardrail:</strong> skor risiko tidak boleh otomatis menentukan status anak. Flag hanya memicu pemeriksaan manusia dan rujukan yang sesuai.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-mitra">
+        <div class="section-title"><div><span class="eyebrow">JEJARING</span><h1>Mitra & MoU</h1><p>Konfigurasi mitra berdasarkan mandat dan jalur rujukan. Detail legal/nomor MoU diisi admin setelah verifikasi.</p></div></div>
+        <div class="grid-3">
+          <article class="partner"><strong>Dinas Sosial</strong><span>Penanganan anak jalanan/PMKS, penjangkauan, dukungan sosial</span><em>Rujukan operasional</em></article>
+          <article class="partner"><strong>BNN</strong><span>Edukasi/pencegahan NAPZA dan rujukan sesuai mandat</span><em>MoU — verifikasi detail</em></article>
+          <article class="partner"><strong>Kementerian Agama</strong><span>Pencegahan perkawinan anak, jejaring tokoh agama/pendidikan keagamaan</span><em>MoU — verifikasi detail</em></article>
+          <article class="partner"><strong>Kemenkumham</strong><span>Dukungan lintas sektor sesuai kewenangan</span><em>MoU — verifikasi detail</em></article>
+          <article class="partner"><strong>Kejaksaan Tinggi</strong><span>Koordinasi proses hukum sesuai kewenangan</span><em>MoU — verifikasi detail</em></article>
+          <article class="partner"><strong>Polisi / Bapas</strong><span>Laporan polisi, pendampingan anak, diversi/restorative justice sesuai tupoksi</span><em>Rujukan kasus</em></article>
+          <article class="partner"><strong>RSUD / Dinas Kesehatan</strong><span>Medis, visum, kesehatan jiwa, rujukan profesional</span><em>Rujukan layanan</em></article>
+          <article class="partner"><strong>PUSPAGA</strong><span>Konsultasi, konseling, pengasuhan, penjangkauan, rujukan</span><em>Preventif & keluarga</em></article>
+          <article class="partner"><strong>PATBM / Forum Anak / Komunitas</strong><span>Edukasi, deteksi risiko, partisipasi anak, penghubung ke layanan formal</span><em>Jejaring komunitas</em></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-tentang">
+        <div class="section-title"><div><span class="eyebrow">PRINSIP DESAIN</span><h1>Tentang, Tata Kelola & Guardrails</h1></div></div>
+        <div class="grid-2">
+          <article class="card"><h3>Yang platform lakukan</h3><ul class="clean-list"><li>Menghubungkan intake, asesmen, rencana, rujukan, pendidikan dan follow-up.</li><li>Menampilkan siapa PIC dan apa status layanan.</li><li>Menyediakan konten pencegahan dan akses bantuan.</li><li>Menyajikan dashboard outcome agregat.</li><li>Mendukung mode aksesibilitas dan assisted access.</li></ul></article>
+          <article class="card"><h3>Yang platform tidak boleh lakukan</h3><ul class="clean-list"><li>Menjadi database baru yang menduplikasi semua sistem.</li><li>Membuka identitas/riwayat sensitif ke semua instansi.</li><li>Menyimpan lokasi presisi anak secara default.</li><li>Menentukan “anak pekerja”, “korban”, atau “pelaku” hanya dari algoritma.</li><li>Mengganti keputusan profesional, hukum, atau safeguarding.</li></ul></article>
+          <article class="card"><h3>Peran tata kelola</h3><dl class="definition"><dt>Policy owner</dt><dd>Menetapkan tujuan, SOP, indikator, dan akuntabilitas</dd><dt>Case-management lead</dt><dd>Menjaga satu case trail sampai layanan selesai</dd><dt>Data steward</dt><dd>Definisi data, akses, kualitas, retensi, audit</dd><dt>Technical owner</dt><dd>Keamanan, integrasi, operasi teknis</dd></dl></article>
+          <article class="card"><h3>Privasi anak sejak awal</h3><p>Gunakan data minimum, privasi tinggi secara baku, persetujuan sesuai usia dan hukum, role-based access, log akses, retensi terbatas, serta mekanisme koreksi/penghapusan yang sah.</p><p class="small">Catatan: detail implementasi legal harus ditinjau oleh unit hukum dan perlindungan data sebelum produksi.</p></article>
+        </div>
+        <div class="callout section-gap"><strong>Nama kerja:</strong> CIEPP — Child-Inclusive Education and Protection Platform. Nama publik dapat diubah setelah co-design dengan anak, keluarga, pemerintah, dan organisasi masyarakat sipil.</div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <span>Dummy prototype untuk co-design & handoff ke tim IT — tidak terhubung ke layanan nyata.</span>
+    <span>Data yang tampil adalah agregat / fiktif; jangan masukkan data pribadi nyata.</span>
+  </footer>
+  <script>
+const pages=[...document.querySelectorAll('.page')];
+const nav=[...document.querySelectorAll('.nav-item')];
+function showPage(name){
+  pages.forEach(p=>p.classList.toggle('active',p.id===`page-${name}`));
+  nav.forEach(n=>n.classList.toggle('active',n.dataset.page===name));
+  const main=document.getElementById('main'); main.focus({preventScroll:true}); window.scrollTo({top:0,behavior:'smooth'});
+}
+document.addEventListener('click',e=>{
+  const target=e.target.closest('[data-page],[data-go]');
+  if(!target) return;
+  showPage(target.dataset.page||target.dataset.go);
+});
+let fontLarge=false;
+document.getElementById('fontBtn').addEventListener('click',()=>{
+  fontLarge=!fontLarge; document.documentElement.style.setProperty('--font-scale',fontLarge?'1.12':'1');
+  document.getElementById('fontBtn').textContent=fontLarge?'A−':'A+';
+});
+document.getElementById('contrastBtn').addEventListener('click',()=>document.body.classList.toggle('high-contrast'));
+document.getElementById('demoForm').addEventListener('submit',e=>{
+  e.preventDefault(); document.getElementById('formMessage').textContent='Demo berhasil — tidak ada data yang dikirim.';
+});
+document.querySelectorAll('.role').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.role').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  const role=btn.dataset.role; const msg=document.createElement('div'); msg.className='callout section-gap'; msg.textContent=`Mode demo: ${role}. Di sistem produksi, menu dan data yang terlihat dibatasi sesuai kewenangan.`;
+  const parent=btn.closest('.page'); const existing=parent.querySelector('.role-message'); if(existing) existing.remove(); msg.classList.add('role-message'); parent.appendChild(msg);
+}));
+
+</script>
+</body>
+</html>
